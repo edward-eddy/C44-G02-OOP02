@@ -8,6 +8,7 @@
         {
             Console.WriteLine("Fun01 From TypeA");
         }
+
         // Must be Not Private and Virtual
         public virtual void Fun02()
         {

@@ -1,6 +1,4 @@
-﻿using Demo.Override;
-
-namespace Demo
+﻿namespace Demo
 {
 
     class Order
@@ -112,21 +110,39 @@ namespace Demo
             // 3.2. Polymorphism Methods (Functions) Overriding
             // There are more than one functions [in different scope] these have tha same Name and the same Signature but with different behaviour
 
-            TypeB typeB = new TypeB() { A = 12, B = 13 }; // Object initializer
+            //TypeB typeB = new TypeB() { A = 12, B = 13 }; // Object initializer
 
             //typeB.A = 12;
             //typeB.B = 13;
 
-            typeB.Fun01();
-            typeB.Fun02();
+            //typeB.Fun01();
+            //typeB.Fun02();
 
             #endregion
+
             #endregion
 
+            #region Binding
+            // Binding 
+            // What is Binding ?
 
+            // ReferenceFromParent ---> OpjectOfChild
 
+            //TypeA Ref;
 
+            //Ref = new TypeA();
+            //Ref = new TypeB();
 
+            // Child is a Parent
+
+            //Ref = new TypeB();
+
+            //Ref.A = 12;
+            //Ref.B = 12; // Error
+
+            //Ref.Fun01(); // TypeA Fun01
+            //Ref.Fun02(); // TypeB Fun02 because of Dynamic binding (override keyword) 
+            #endregion
 
         }
     }
