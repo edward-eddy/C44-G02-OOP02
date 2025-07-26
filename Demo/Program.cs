@@ -144,6 +144,34 @@
             //Ref.Fun02(); // TypeB Fun02 because of Dynamic binding (override keyword) 
             #endregion
 
+            #region Not Binding
+            // Binding
+            // ParentReference --> ChildObject
+
+            //TypeA Ref = new TypeA();
+
+            //Ref = new TypeB(); // Binding
+
+            //TypeB Ref = new TypeB();
+
+            //Ref = new TypeA(); // Error
+
+            // Child is a Parent
+
+            // Animal --> Dog : Dog is a Animal
+            // Dog --> (Dog) Animal : Animal is not a Dog
+
+            //TypeA Ref = new TypeA();
+            // Ref = new TypeB();
+
+            //TypeB typeB = (TypeB) Ref; // Not Binding 
+            #endregion
+
+
+
+
+
+
         }
     }
 }
