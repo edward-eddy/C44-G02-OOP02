@@ -1,4 +1,6 @@
-﻿namespace Demo
+﻿using Demo.Binding;
+
+namespace Demo
 {
 
     class Order
@@ -40,6 +42,30 @@
         }
         #endregion
 
+        static void EmployeeProcess(FullTimeEmployee employee)
+        {
+            if (employee is not null)
+            {
+                employee.Fun01();
+                employee.Fun02();
+            }
+        }
+        //static void EmployeeProcess(PartTimeEmployee employee)
+        //{
+        //    if (employee is not null)
+        //    {
+        //        employee.Fun01();
+        //        employee.Fun02();
+        //    }
+        //}
+        static void EmployeeProcess(Employee employee)
+        {
+            if (employee is not null)
+            {
+                employee.Fun01();
+                employee.Fun02();
+            }
+        }
         static void Main(string[] args)
         {
             #region Class VS. Struct
@@ -165,6 +191,42 @@
             // Ref = new TypeB();
 
             //TypeB typeB = (TypeB) Ref; // Not Binding 
+            #endregion
+
+            #region When U Need Binding?
+            // When U Need Binding ??
+
+            // FullTimeEmployee : Id, Name, Address, Email, Salary
+
+            //FullTimeEmployee fullTime = new FullTimeEmployee()
+            //{
+            //    Id = 1,
+            //    Name = "Ahmed",
+            //    Email = "ahmed@g.c",
+            //    Address = "Cairo",
+            //    Salary = 12000
+            //};
+
+            //EmployeeProcess(fullTime);
+
+
+            // PartTimeEmployee : Id, Name, Address, Email, NumberOfHours, HourRate
+
+            //PartTimeEmployee partTime = new PartTimeEmployee()
+            //{
+            //    Id = 1,
+            //    Name = "Ali",
+            //    Email = "test@test.com",
+            //    Address = "Alex",
+            //    HourRate = 200,
+            //    NumberOfHours = 200
+            //};
+
+            //EmployeeProcess(partTime);
+
+
+            //EmployeeProcess(fullTime);
+            //EmployeeProcess(partTime); 
             #endregion
 
 
