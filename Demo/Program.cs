@@ -16,6 +16,30 @@
     class Chair { }
     internal class Program
     {
+
+        #region Sum Function Overloading
+        static int Sum(int X, int Y)
+        {
+            return X + Y;
+        }
+        static int Sum(int X, int Y, int Z)
+        {
+            return X + Y + Z;
+        }
+        static double Sum(double X, double Y)
+        {
+            return X + Y;
+        }
+        static double Sum(int X, double Y)
+        {
+            return X + Y;
+        }
+        static double Sum(double X, int Y)
+        {
+            return X + Y;
+        }
+        #endregion
+
         static void Main(string[] args)
         {
             #region Class VS. Struct
@@ -59,13 +83,25 @@
             //   2.2. Association : Room Has a Chair 
             #endregion
 
+            #region Polymprphism Overview
             // 3. Polymprphism
             // 3.1. Polymorphism Methods (Functions) Overloading
             // 3.2. Polymorphism Methods (Functions) Overriding
 
-            // Console.WriteLine();
+            // Console.WriteLine(); 
+            #endregion
 
+            #region 3.1. Polymorphism Methods (Functions) Overloading
+            // 3.1. Polymorphism Methods (Functions) Overloading
+            // There are more than one function (in the same scope [class - struct]) these have the same Name but with different Signature
+            // (Count - Type - Order) Parameters
 
+            //Sum (1, 2);
+            //Sum (1.3, 2.4);
+
+            //Sum(1.3, 3.4);
+            //Sum(); 
+            #endregion
 
 
 
