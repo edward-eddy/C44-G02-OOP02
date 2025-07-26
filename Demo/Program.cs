@@ -1,5 +1,19 @@
 ﻿namespace Demo
 {
+
+    class Order
+    {
+        public Item[] Items { get; set; }
+    }
+    class Item { }
+
+    class Room
+    {
+        public Wall Wall { get; set; }
+        public Chair[]? Chairs { get; set; }
+    }
+    class Wall { }
+    class Chair { }
     internal class Program
     {
         static void Main(string[] args)
@@ -18,7 +32,7 @@
             // All Six Access Modifires --------------------------> Private, Internal, Public
             #endregion
 
-            #region 2. Inheritance
+            #region Inheritance
             // 2. Inheritance : 
             // X --> Y
             // DRY 
@@ -35,6 +49,21 @@
             //child.Fun01();
             //child.Fun02(); 
             #endregion
+
+            #region Relationship Between Classes
+            // Relationship Between Classes
+
+            // 1. Inheritance : "is a"  Relationship [FullTimeEmployee is a Employee]
+            // 2. Aggrigation : "has a" Relationship [Order has a Item]
+            //   2.1. Composition : Order Has A Item, Room Has a Wall
+            //   2.2. Association : Room Has a Chair 
+            #endregion
+
+
+
+
+
+
 
         }
     }
