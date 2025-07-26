@@ -1,4 +1,6 @@
-﻿namespace Demo
+﻿using Demo.Override;
+
+namespace Demo
 {
 
     class Order
@@ -83,6 +85,8 @@
             //   2.2. Association : Room Has a Chair 
             #endregion
 
+            #region 3. Polymorphism
+
             #region Polymprphism Overview
             // 3. Polymprphism
             // 3.1. Polymorphism Methods (Functions) Overloading
@@ -101,6 +105,22 @@
 
             //Sum(1.3, 3.4);
             //Sum(); 
+            #endregion
+
+            #region 3.2. Polymorphism Methods (Functions) Overriding
+
+            // 3.2. Polymorphism Methods (Functions) Overriding
+            // There are more than one functions [in different scope] these have tha same Name and the same Signature but with different behaviour
+
+            TypeB typeB = new TypeB() { A = 12, B = 13 }; // Object initializer
+
+            //typeB.A = 12;
+            //typeB.B = 13;
+
+            typeB.Fun01();
+            typeB.Fun02();
+
+            #endregion
             #endregion
 
 
