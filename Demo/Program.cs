@@ -229,6 +229,23 @@ namespace Demo
             //EmployeeProcess(partTime); 
             #endregion
 
+            #region Binding Example
+            //TypeA typeA;
+
+            //typeA = new TypeA();
+            //typeA = new TypeB(); // TypeA is a Parent Of TypeB 
+            //typeA = new TypeC(); // TypeA is a Indiriect Parent Of TypeC
+            //typeA = new TypeD(); // TypeA is a Indiriect Parent Of TypeD
+
+            //typeA.A = 12;
+            //typeA.B = 12; // Can't
+            //typeA.C = 12; // Can't
+            //typeA.D = 12; // Can't
+
+            //typeA.Fun01();
+            //typeA.Fun02();
+            #endregion
+
 
 
 
