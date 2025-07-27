@@ -1,16 +1,22 @@
-﻿using Task02.Classes;
-
-namespace Task02
+﻿namespace Task02
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Class01 class01 = new Class01();
-            Class02 class02 = new Class02();
+            // Summary
 
-            class01.InternalProtected = 13;
-            class02.InternalProtected = 12;
+            // Same Assembly, Derived Class :
+            // "public" and "internal" are accessable
+            // "protected", "internal protected" and "private protected" are accessable
+
+            // Same Assembly, Non-derived Class :
+            // "public" and "internal" are accessable
+            // Only internal protected is accessable
+
+            // Different Assembly, Derived Class :
+            // "public" is accessable
+            // "protected" and "internal protected" are accessable
 
         }
     }
